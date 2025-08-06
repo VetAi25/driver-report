@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <title>Звіт кур’єра</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script defer src="script.js"></script>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 20px;
+      background: #f0f2f5;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      font-size: 16px;
+    }
+
+    button {
+      padding: 12px;
+      margin-top: 20px;
+      width: 100%;
+      font-weight: bold;
+      background-color: #0088cc;
+      color: white;
+      border: none;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background-color: #0077b3;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h2>🚚 Звіт кур’єра</h2>
+  <form id="reportForm">
+    <label>📅 Початкова дата:
+      <input type="date" name="start_date" required />
+    </label>
+
+    <label>📅 Кінцева дата:
+      <input type="date" name="end_date" required />
+    </label>
+
+    <label>📏 Показник одометра (км):
+      <input type="number" name="odometer" required />
+    </label>
+
+    <label>🚗 Пробіг (км):
+      <input type="number" name="distance" required />
+    </label>
+
+    <label>⛽ Витрата пального (л/100км):
+      <input type="number" name="consumption" step="0.01" required />
+    </label>
+
+    <label>💸 Вартість пального (грн/л):
+      <input type="number" name="fuel_price" step="0.01" required />
+    </label>
+
+    <label>💰 Компенсація (грн):
+      <input type="number" name="compensation" step="0.01" required />
+    </label>
+
+    <button type="submit">📨 Надіслати звіт</button>
+  </form>
+</body>
+</html>
