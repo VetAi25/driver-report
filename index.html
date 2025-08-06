@@ -2,7 +2,7 @@
 <html lang="uk">
 <head>
   <meta charset="UTF-8" />
-  <title>Тижневий автозвіт</title>
+  <title>Звіт кур’єра</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script defer src="script.js"></script>
   <style>
@@ -10,45 +10,39 @@
       font-family: sans-serif;
       padding: 20px;
       background: #f0f2f5;
-      max-width: 500px;
-      margin: auto;
     }
-    h2 {
-      margin-bottom: 10px;
-    }
+
     label {
       display: block;
       margin-top: 15px;
     }
-    input, textarea {
+
+    input {
       width: 100%;
       padding: 10px;
       margin-top: 5px;
-      box-sizing: border-box;
+      font-size: 16px;
     }
-    textarea {
-      resize: vertical;
-      min-height: 60px;
-    }
+
     button {
-      padding: 16px;
+      padding: 12px;
       margin-top: 20px;
       width: 100%;
       font-weight: bold;
-      background: #007bff;
+      background-color: #0088cc;
       color: white;
       border: none;
-      border-radius: 6px;
-      cursor: pointer;
       font-size: 16px;
     }
+
     button:hover {
-      background: #0056b3;
+      background-color: #0077b3;
+      cursor: pointer;
     }
   </style>
 </head>
 <body>
-  <h2 id="reportTitle">🚚 Тижневий автозвіт</h2>
+  <h2>🚚 Звіт кур’єра</h2>
   <form id="reportForm">
     <label>📅 Початкова дата:
       <input type="date" name="start_date" required />
@@ -75,11 +69,7 @@
     </label>
 
     <label>💰 Компенсація (грн):
-      <input type="number" name="compensation" step="0.01" required readonly />
-    </label>
-
-    <label>📝 Коментар:
-      <textarea name="comment" placeholder="Зауваження, маршрут, ситуації тощо…"></textarea>
+      <input type="number" name="compensation" step="0.01" required />
     </label>
 
     <button type="submit">📨 Надіслати звіт</button>
