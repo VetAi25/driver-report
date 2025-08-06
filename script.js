@@ -9,8 +9,17 @@ window.addEventListener("DOMContentLoaded", () => {
   const startOfWeek = new Date(today);
   startOfWeek.setDate(today.getDate() - today.getDay() + 1);
 
+  const formatDate = (date) =>
+  date.toLocaleDateString("uk-UA").replace(/\//g, ".");
+
+  // Заповнення полів дат
+
   form.querySelector('input[name="start_date"]').value = startOfWeek.toISOString().split('T')[0];
   form.querySelector('input[name="end_date"]').value = today.toISOString().split('T')[0];
+
+    // Встановлення заголовку з поточною датою
+  document.getElementById("reportTitle").textContent =
+    "🚚 Тижневий автозвіт від " + formatDate(today);
 });
 
 // Автоматичний розрахунок компенсації
