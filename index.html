@@ -2,7 +2,7 @@
 <html lang="uk">
 <head>
   <meta charset="UTF-8" />
-  <title>Звіт кур’єра</title>
+  <title>Тижневий автозвіт</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script defer src="script.js"></script>
   <style>
@@ -42,7 +42,7 @@
   </style>
 </head>
 <body>
-  <h2>🚚 Звіт кур’єра</h2>
+  <h2 id="reportTitle">🚚 Тижневий автозвіт від </h2>
   <form id="reportForm">
     <label>📅 Початкова дата:
       <input type="date" name="start_date" required />
@@ -70,6 +70,10 @@
 
     <label>💰 Компенсація (грн):
       <input type="number" name="compensation" step="0.01" required />
+    </label>
+    
+    <label>📝 Коментар (необов’язково):
+      <textarea name="comment" rows="3" placeholder="Зауваження, маршрут, ситуації тощо…"></textarea>
     </label>
 
     <button type="submit">📨 Надіслати звіт</button>
